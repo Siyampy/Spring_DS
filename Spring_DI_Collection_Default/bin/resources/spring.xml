@@ -1,0 +1,31 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			<beans>
+<bean id="t" class="beans.Test">
+<property name="fruits">
+<list>
+<value>Apple</value>
+<value>Guava</value>
+<value>Orange </value>
+</list>
+</property>
+<property name="fruit_taste">
+<set>
+<value>Sweet</value>
+<value>Hot</value>
+<value>Orange </value>
+<value>Orange </value>
+</set>
+</property>
+
+<property name="match">
+<map>
+<entry key="Sachin" value="Boundary"/>
+<entry key="Dhoni" value="Helicopter"/>
+<entry key="Dravid" value="Stroke"/>
+
+</map>
+</property>
+
+</bean>
+</beans>

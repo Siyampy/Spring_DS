@@ -1,0 +1,13 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+<!-- Here Engine object is been passed by reference and so we can use it in any tag -->
+<bean id="c" class="beans.Car">
+<property name="name"><value>Audi</value></property>
+<property name="engine" ref="e"></property>
+</bean>
+
+
+
+</beans>

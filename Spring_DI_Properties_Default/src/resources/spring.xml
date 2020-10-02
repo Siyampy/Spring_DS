@@ -1,0 +1,25 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="t" class="beans.Test">
+
+<property name="con">
+
+<props>
+<prop key="driverClass">com.mysql.jdbc.Driver</prop>
+<prop key="url">jdbc:mysql://localhost:3306</prop>
+<prop key="user">root</prop>
+
+<!-- Since & has the special meaning to the XML parsers/XML so we need to escape it using &amp; -->
+
+<prop key="pwd"> Dh@nu5h!&amp;&amp;&amp;</prop>
+<prop key="db">college</prop>
+
+
+</props>
+</property>
+
+
+</bean>
+
+</beans>

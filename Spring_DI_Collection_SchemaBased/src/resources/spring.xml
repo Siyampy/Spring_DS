@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:util="http://www.springframework.org/schema/util" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+  http://www.springframework.org/schema/context 
+  http://www.springframework.org/schema/context/spring-context-3.0.xsd
+  http://www.springframework.org/schema/util 
+  http://www.springframework.org/schema/util/spring-util.xsd
+  ">
+ <bean id="t" class="beans.Test">
+<property name="fruits">
+<util:list list-class="java.util.Vector">
+<value>Apple</value>
+<value>Guava</value>
+<value>Orange </value>
+</util:list>
+</property>
+<property name="fruit_taste">
+<util:set set-class="java.util.TreeSet">
+<value>Sweet</value>
+<value>Hot</value>
+<value>Bitter </value>
+</util:set>
+</property>
+
+<property name="match">
+<util:map map-class="java.util.Hashtable">
+<entry key="Sachin" value="Boundary"/>
+<entry key="Dhoni" value="Helicopter"/>
+<entry key="Dravid" value="Stroke"/>
+</util:map>
+
+</property>
+
+</bean>
+</beans>
