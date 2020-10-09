@@ -8,8 +8,6 @@ import beans.Bus;
 import beans.Car;
 public class Client {
 	public static void main(String[] args) {
-		MethodInvokingBean m = new MethodInvokingBean();
-
 	ApplicationContext context = new ClassPathXmlApplicationContext("resources/car-engine.xml");
 //	ApplicationContext context = new ClassPathXmlApplicationContext("resources/car.xml","resources/engine.xml");
 	Car c= (Car)context.getBean("c");
