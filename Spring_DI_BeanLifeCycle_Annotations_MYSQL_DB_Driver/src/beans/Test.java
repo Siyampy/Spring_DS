@@ -9,18 +9,20 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Properties;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.annotation.CommonAnnotationBeanPostProcessor;
 
-public class Test implements InitializingBean,DisposableBean{
-private String driver,url,username,pwd; 
+public class Test  {
+	
+private String driver,url,username; 
 Properties prop = null;
 private Connection con;
 public void setDriver(String driver) {
 	this.driver = driver;
-}
-public void setPwd(String pwd) {
-	this.pwd = pwd;
 }
 public void setUrl(String url) {
 	this.url = url;
@@ -28,16 +30,18 @@ public void setUrl(String url) {
 public void setUsername(String username) {
 	this.username = username;
 }
-	@Override
-	public void destroy() throws Exception {
+//	@Override
+	@PreDestroy
+	public void mydestroy() throws Exception {
 		// TODO Auto-generated method stub
 		con.close();
 		System.out.println("COnnection Closed");
 		
 	}
 
-	@Override
-	public void afterPropertiesSet() throws Exception {
+//	@Override
+	@PostConstruct
+	public void myinit() throws Exception {
 		// It executes after the properties has been set for the 
 		try (InputStream input = new FileInputStream("src/resources/Creds.properties")) {
             prop = new Properties();
