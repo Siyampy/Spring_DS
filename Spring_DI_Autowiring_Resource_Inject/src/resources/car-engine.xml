@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+
+
+				
+<!-- But here we can actually use the engine as the inner bean andso it need not be used separately 
+
+By Autowire annotation it by default takes byType and in case of ambiguity it uses byName instead.
+To manually resolve ambiguity use Qualifier annoation and specify the id to refer to
+
+
+-->
+
+
+
+<bean class ="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+
+
+
+<bean id="e1" class="beans.Engine"  > 
+  <property name="model"><value>Suzuki</value></property>  
+</bean>
+
+<bean id="e2" class="beans.Engine" > 
+  <property name="model"><value>Honda</value></property>  
+</bean>
+
+<bean id="e3" class="beans.Engine"> 
+ <property name="model"><value>Maruthi</value></property> 
+</bean>
+
+<bean id="c" class="beans.Car" > 
+<property name="id"><value>1</value></property>
+<property name="name"><value>Audi</value></property>
+</bean>
+
+</beans>
