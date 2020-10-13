@@ -4,14 +4,14 @@ import org.springframework.aop.framework.ProxyFactoryBean;
 import org.springframework.core.log.LogAccessor;
 
 import business.Bank;
-import services.LogAroundService;
+import services.LogInExceptionService;
 
 public class Client {
 	public static void main(String[] args) {
 //		Target
 		Bank b= new Bank();
 		//Advice 
-	LogAroundService lbs=new LogAroundService();
+		LogInExceptionService lbs=new LogInExceptionService();
 		//Adding Target + Advice to the proxy.
 		ProxyFactoryBean pfb= new ProxyFactoryBean();
 //		System.out.println("pfb");
@@ -20,7 +20,7 @@ public class Client {
 		// Get generated proxy
 		Bank bproxy=(Bank)pfb.getObject();
 		
-		int amount=bproxy.deposit("SBI1234", 3000);
+		int amount=bproxy.deposit("SBI124", 3000);
 		System.out.println(amount);
 	}
 	
