@@ -16,7 +16,7 @@ public class LogAfterService implements AfterReturningAdvice {
 	@Override
 	public void afterReturning(Object arg0, Method arg1, Object[] arg2, Object arg3) throws Throwable {
 		Log l=	LogFactory.getLog(Bank.class);
-		l.info("Deposit is gonna End.......................");
+		l.info("Deposit is gonna End......................."+arg3);
 		
 	}
 
