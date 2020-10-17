@@ -20,7 +20,7 @@ public class Client {
 		// Get generated proxy
 		Bank bproxy=(Bank)pfb.getObject();
 		
-		int amount=bproxy.deposit("SBI124", 3000);
+		int amount=bproxy.deposit("SBI123", 3000);
 		System.out.println(amount);
 	}
 	
