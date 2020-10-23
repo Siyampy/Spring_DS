@@ -8,15 +8,10 @@
 </head>
 <body>
 	<h1>HEllo World Enter your name</h1>
-	<form action="./hello.ds">
+	<form action="./hello">
 		Name:<input type="text" name="name" />
 		 <input type="submit"
 			value="Hello" />
-	</form>
-	<form action="./game.ds">
-		
-		 <input type="submit"
-			value="Press to play game" />
 	</form>
 </body>
 </html>
