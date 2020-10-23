@@ -11,8 +11,7 @@
 	<aop:aspectj-autoproxy />
 	<context:annotation-config/>
 	<bean id="b" class="business.Bank" />
-	<bean id="lb" class="services.LogBeforeService" />
-	<bean id="la" class="services.LogAfterService" />
+	
 	<bean id="lao" class="services.LogAroundService" />
 	
 	

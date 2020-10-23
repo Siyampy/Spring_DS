@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 public class Bank {
 	private int amount=5000;
 	private String accno="SBI123";
+	
+	
 	public int deposit(String accno,int amount) 
 	{
 		if(accno.equals(this.accno))
@@ -16,8 +18,8 @@ public class Bank {
 		}
 		else
 		{
-//			return 0;
-			throw new AccNoNotFoundException();
+			return 0;
+//			throw new AccNoNotFoundException();
 		}
 		
 	}

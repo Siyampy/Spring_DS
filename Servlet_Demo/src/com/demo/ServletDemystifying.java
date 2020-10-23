@@ -1,6 +1,8 @@
 package com.demo;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.HttpServlet;
@@ -37,7 +39,7 @@ public class ServletDemystifying extends HttpServlet
 			
             }
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		super.doPut(req, resp);
 		System.out.println(req.getContextPath());
@@ -51,6 +53,11 @@ public class ServletDemystifying extends HttpServlet
 //			resp.sendRedirect(req.getContextPath() + "/welcome.jsp");
 //			
 //		}
+		PrintWriter out=res.getWriter();  
+		out.print("<html><body>");  
+//		out.print("<b>"+req.isSecure()+"</b>");  
+		out.print("<b>"+req.getParameter("user")+"</b>"); 
+		out.print("</body></html>");  
 		  
 	}
 	public void destroy()

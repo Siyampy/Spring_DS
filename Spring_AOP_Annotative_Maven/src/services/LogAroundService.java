@@ -26,9 +26,16 @@ public class LogAroundService
 	public void around(ProceedingJoinPoint jp) throws Throwable
 	{
 	System.out.println("Executing around before  the service ");
-	jp.proceed();
+//	Object o;
+	for (Object o : jp.getArgs())
+	{
+		System.out.println(o);		
+	}
+	Object obj=jp.proceed(jp.getArgs());
 	System.out.println(jp.getThis().toString());
+	System.out.println(obj.toString());
 	System.out.println("Executing around after  the service ");
 	
 	}
 }
+
