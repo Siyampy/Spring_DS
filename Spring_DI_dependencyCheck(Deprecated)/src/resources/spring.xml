@@ -1,9 +1,0 @@
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
-	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
-<!-- But here we can actually use the engine as the inner bean andso it need not be used separately -->
-<bean id="c" class="beans.Car" dependency-check="simple">
-<property name="name"> <value>Siyam</value></property> 
-</bean>
-</beans>
