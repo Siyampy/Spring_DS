@@ -3,25 +3,22 @@ package configuration;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
-
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
-
-
 /**
  * @author siyam
  * java based configuration for the Spring MVC
+ * Initializer class 
+ * https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/WebApplicationInitializer.html
  *
  */
 public class Initializer implements WebApplicationInitializer {	
 	@Override
 	public void onStartup(ServletContext servletCxt) throws ServletException {
-		 // Load Spring web application configuration Java Based
-   
+		 // Load Spring web application configuration Java Based   
 		AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
 		appContext.register(ApplicationContextConfig.class);
-
         // Create and register the DispatcherServlet
         DispatcherServlet servlet = new DispatcherServlet(appContext);
         ServletRegistration.Dynamic registration = servletCxt.addServlet("springmvcannotation", servlet);
@@ -29,7 +26,5 @@ public class Initializer implements WebApplicationInitializer {
         registration.addMapping("*.ds");
         servlet.setDetectAllHandlerMappings(true);
         servlet.setDetectAllViewResolvers(true);
-
 	}
-
 }

@@ -6,10 +6,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-
-
 /**
- * BeanNameUrlHandlerMapping Configuration using java config
+ *  Configuration using java Config
  *
  */
 @Configuration

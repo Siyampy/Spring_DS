@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_251"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/home/siyam/siyam/My/java/Eclipse_workspace/spring_supp_files/spring-framework-5.2.8.RELEASE/libs/spring-aop-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/siyam/siyam/My/java/Eclipse_workspace/spring_supp_files/javax.inject-1.0-PFD-1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/IOC"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
