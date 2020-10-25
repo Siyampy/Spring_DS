@@ -14,8 +14,7 @@ import org.springframework.web.servlet.DispatcherServlet;
  * java based configuration for the Spring MVC
  *
  */
-public class MyWebApplicationInitializer implements WebApplicationInitializer {
-
+public class Initializer implements WebApplicationInitializer {	
 	@Override
 	public void onStartup(ServletContext servletCxt) throws ServletException {
 		 // Load Spring web application configuration Java Based

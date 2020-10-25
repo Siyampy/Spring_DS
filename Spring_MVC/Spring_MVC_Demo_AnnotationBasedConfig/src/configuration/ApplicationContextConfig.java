@@ -1,16 +1,21 @@
 package configuration;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.servlet.mvc.Controller;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import controller.HelloGame;
-import controller.HelloSpring;
+
 
 /**
  * BeanNameUrlHandlerMapping Configuration using java config
  *
  */
+@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = "controller")
+//The Component scan is necessary to initialize the controller annotation classes to handle the upcoming request
 public class ApplicationContextConfig 
 {
 	 @Bean(name = "viewResolver")
@@ -19,14 +24,5 @@ public class ApplicationContextConfig
 	        viewResolver.setPrefix("/");
 	        viewResolver.setSuffix(".jsp");
 	        return viewResolver;
-	    }
-	     
-	    @Bean(name = "/hello.ds")
-	    public Controller getHelloSpring() {
-	        return new HelloSpring();
-	    }
-	    @Bean(name = "/game.ds")
-	    public Controller get() {
-	        return new HelloGame();
-	    }
+	    }	    
 }
