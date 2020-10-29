@@ -7,18 +7,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.AbstractController;
 import org.springframework.web.servlet.mvc.Controller;
-//import org.springframework.web.servlet.mvc.UrlFilenameViewController;
 
-public class HelloSpring implements Controller {
-
+public class HelloGame extends AbstractController {
 	@Override
-	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-String name=request.getParameter("name");
-		
+	protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
 		Map<String, String> m=new HashMap<String, String>();
-		m.put("msg", "HEllo......"+name);
+		m.put("msg", "HEllo......Welcome to the game show   :) ");
 		ModelAndView mv= new ModelAndView("output",m);
+		
+		
 		
 		return mv;
 	}
