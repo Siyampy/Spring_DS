@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Spring_MVC_Demo_XML" path="/Spring_MVC_Demo_XML" reloadable="true" source="org.eclipse.jst.jee.server:Spring_MVC_Demo_XML"/><Context docBase="Spring_MVC_Demo_JavaBasedConfig" path="/Spring_MVC_Demo_JavaBasedConfig" reloadable="true" source="org.eclipse.jst.jee.server:Spring_MVC_Demo_JavaBasedConfig"/><Context docBase="Spring_MVC_Demo_AnnotationBasedConfig" path="/Spring_MVC_Demo_AnnotationBasedConfig" reloadable="true" source="org.eclipse.jst.jee.server:Spring_MVC_Demo_AnnotationBasedConfig"/><Context docBase="Spring_MVC_Understanding" path="/Spring_MVC_Understanding" reloadable="true" source="org.eclipse.jst.jee.server:Spring_MVC_Understanding"/><Context docBase="Spring_MVC_Demo_XML_InitParam" path="/Spring_MVC_Demo_XML_InitParam" reloadable="true" source="org.eclipse.jst.jee.server:Spring_MVC_Demo_XML_InitParam"/></Host>
+      <Context docBase="Spring_MVC_Demo_XML_ContextParam" path="/Spring_MVC_Demo_XML_ContextParam" reloadable="true" source="org.eclipse.jst.jee.server:Spring_MVC_Demo_XML_ContextParam"/></Host>
     </Engine>
   </Service>
 </Server>
