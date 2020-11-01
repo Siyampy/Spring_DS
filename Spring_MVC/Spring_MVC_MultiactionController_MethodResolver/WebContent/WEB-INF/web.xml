@@ -6,21 +6,11 @@ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
   <servlet>
   <!--  Here by default it searches servletname-servlet.xm file -->
   
-  <servlet-name>springmvcxml</servlet-name>
+  <servlet-name>MAC</servlet-name>
   <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
   </servlet>
-
-<context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>/WEB-INF/spring.xml</param-value>
-</context-param>
- <listener >
-    <listener-class>
-        org.springframework.web.context.ContextLoaderListener
-</listener-class>
-</listener>
   <servlet-mapping>
-  <servlet-name>springmvcxml</servlet-name>
+  <servlet-name>MAC</servlet-name>
   <url-pattern>*.ds</url-pattern>
   </servlet-mapping>
 </web-app>
