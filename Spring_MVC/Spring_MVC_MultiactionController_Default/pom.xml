@@ -1,9 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>Spring_MVC_URLFIleNameCOntroller</groupId>
-  <artifactId>Spring_MVC_URLFIleNameCOntroller</artifactId>
+  <groupId>Spring_MVC_MultiactionController_Default</groupId>
+  <artifactId>Spring_MVC_MultiactionController_Default</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  <name>Spring_MVC_MultiactionController_Default</name>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -24,40 +25,38 @@
       </plugin>
     </plugins>
   </build>
-  <dependencies>
+   <dependencies>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>5.2.9.RELEASE</version>
+			<version>4.0.5.RELEASE</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>5.2.9.RELEASE</version>
+			<version>4.0.5.RELEASE</version>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>5.2.9.RELEASE</version>
+			<version>4.0.5.RELEASE</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>5.2.9.RELEASE</version>
+			<version>4.0.5.RELEASE</version>
  		 </dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>5.2.9.RELEASE</version>
+			<version>4.0.5.RELEASE</version>
 		</dependency>
-
-		
-
 
 	</dependencies>
 </project>

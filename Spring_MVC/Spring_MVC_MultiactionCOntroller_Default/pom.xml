@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>Spring_MVC_URLFIleNameCOntroller</groupId>
-  <artifactId>Spring_MVC_URLFIleNameCOntroller</artifactId>
+  <groupId>Spring_MVC_MultiactionCOntroller_Default</groupId>
+  <artifactId>Spring_MVC_MultiactionCOntroller_Default</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <build>
@@ -35,8 +35,9 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>5.2.9.RELEASE</version>
+			<version>4.0.5.RELEASE</version>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -55,9 +56,6 @@
 			<artifactId>spring-beans</artifactId>
 			<version>5.2.9.RELEASE</version>
 		</dependency>
-
-		
-
 
 	</dependencies>
 </project>
