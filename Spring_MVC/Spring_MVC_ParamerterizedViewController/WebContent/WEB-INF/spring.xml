@@ -15,10 +15,11 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 
 </bean>
 <bean name="/game.ds" class="controller.HelloGame">
-<property name="viewName" value="output"></property>
+<property name="viewName" value="output1"></property>
 
 </bean>
- <!-- After handlings request to map the output to the particular View we need to configure using ViewResolver -->
+ <!-- After handlings request to map the output to the particular View 
+ we need to configure using ViewResolver -->
 
  <bean name="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
 	<property name="prefix">

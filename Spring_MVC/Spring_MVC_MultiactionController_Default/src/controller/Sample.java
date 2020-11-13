@@ -16,4 +16,11 @@ public ModelAndView empupdate(HttpServletRequest request, HttpServletResponse re
 	ModelAndView mv= new ModelAndView("update");
 	return mv;
 }
+// The same name of the url mapping is to be given as the handler function when using the MultiAction controller.
+//To customize the usage of the methods then we neeed the MethodResolver.
+public ModelAndView empadd(HttpServletRequest request, HttpServletResponse response) throws Exception 
+{	
+	ModelAndView mv= new ModelAndView("add");
+	return mv;
+}
 }

@@ -13,5 +13,6 @@
 	<!-- Here we maintain security by providing the  duplicate  view file names .ds and we actually map them with the .jsp file  -->
 	<a href="./hello.ds"> Hello</a>
 		<a href="./hai.ds">hai</a>
+		<a href="./welcome.ds">Welcome</a>
 </body>
 </html>

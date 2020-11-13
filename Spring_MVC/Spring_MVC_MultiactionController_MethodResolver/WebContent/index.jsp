@@ -14,5 +14,7 @@
 <input type="submit" value="Save" /></form>
 <form action="./empupdate.ds">
 <input type="submit" value="Update" /></form>
+<form action="./empadd.ds">
+<input type="submit" value="Add" /></form>
 </body>
 </html>

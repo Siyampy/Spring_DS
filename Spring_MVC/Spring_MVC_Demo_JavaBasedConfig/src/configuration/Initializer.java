@@ -24,7 +24,7 @@ public class Initializer implements WebApplicationInitializer {
 
         // Create and register the DispatcherServlet
         DispatcherServlet servlet = new DispatcherServlet(appContext);
-        ServletRegistration.Dynamic registration = servletCxt.addServlet("springmvcxml", servlet);
+        ServletRegistration.Dynamic registration = servletCxt.addServlet("springmvcjava", servlet);
         registration.setLoadOnStartup(1);
         registration.addMapping("*.ds");
         servlet.setDetectAllHandlerMappings(true);

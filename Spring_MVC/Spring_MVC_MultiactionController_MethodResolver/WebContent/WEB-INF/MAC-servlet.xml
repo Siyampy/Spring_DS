@@ -3,24 +3,37 @@
         "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
+<!-- The bean to map the upcoming action tot he controller -->
 <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
  <property name="mappings">
  <props>
  <prop key="/empsave.ds">jee</prop>
  <prop key="/empupdate.ds">jee</prop>
+  <prop key="/empadd.ds">add</prop>
+
  </props>
  </property>
  </bean>
+ <!-- The controller bean which handles the mappings for which the above simpleurelhandler delegates req -->
  <bean id="jee" class="controller.Sample">
  <property name="methodNameResolver">
  <bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
  <property name="prefix" value="dhanush"></property>
  <property name="suffix" value="siyam"></property>
  </bean>
- 
  </property>
- 
  </bean>
+ <!-- ================================================================ -->
+ 
+ <bean id="add" class="controller.Sample">
+ <property name="methodNameResolver">
+ <bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+ <property name="prefix" value="dd"></property>
+ <property name="suffix" value="ss"></property>
+ </bean>
+ </property>
+ </bean>
+ <!-- View Resolver that helps in the mapping view names from controller ot respective views. -->
  <bean name="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
 	<property name="prefix">
 		<value>WEB-INF/jsp/</value>

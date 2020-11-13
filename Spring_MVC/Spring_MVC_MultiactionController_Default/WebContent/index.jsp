@@ -10,9 +10,12 @@
 <h2>Welcome</h2>
 <a href="./empsave.ds"> Save </a>
 <a href="./empupdate.ds"> Update </a>
+<a href="./empadd.ds"> Add </a>
 <form action="./empsave.ds">
 <input type="submit" value="Save" /></form>
 <form action="./empupdate.ds">
 <input type="submit" value="Update" /></form>
+<form action="./empadd.ds">
+<input type="submit" value="Add" /></form>
 </body>
 </html>

@@ -12,6 +12,11 @@
 		Name:<input type="text" name="name" />
 		 <input type="submit"
 			value="Hello" />
+			
+	</form>
+	<form action="./hai.ds">		
+		 <input type="submit"
+			value="Sayhai" />			
 	</form>
 	
 </body>

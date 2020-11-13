@@ -11,7 +11,19 @@
  </props>
  </property>
  </bean>
+ 
+ <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+ <property name="mappings">
+ <props>
+ <prop key="/empadd.ds">add</prop>
+ </props>
+ 
+ </property>
+ 
+ </bean>
  <bean id="jee" class="controller.Sample"></bean>
+  <bean id="add" class="controller.Sample"></bean>
+ 
  <bean name="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
 	<property name="prefix">
 		<value>WEB-INF/jsp/</value>

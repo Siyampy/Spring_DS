@@ -17,6 +17,7 @@ public class HelloSpring {
 	@RequestMapping(value="/hello.ds",method =RequestMethod.GET)
 	public String greetHelloSpring(ModelMap model)
 	{
+		
 		model.addAttribute("msg", "Hello Spring Again, from Spring 5 MVC");
 		return "output";
 	}

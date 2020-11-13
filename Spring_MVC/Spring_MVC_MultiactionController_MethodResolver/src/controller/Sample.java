@@ -9,12 +9,15 @@ public ModelAndView dhanushempsavesiyam(HttpServletRequest request, HttpServletR
 {
 	ModelAndView mv= new ModelAndView("save");
 	return mv;
-	
-
 }
 public ModelAndView dhanushempupdatesiyam(HttpServletRequest request, HttpServletResponse response) throws Exception 
 {	
 	ModelAndView mv= new ModelAndView("update");
+	return mv;
+}
+public ModelAndView ddempaddss(HttpServletRequest request, HttpServletResponse response) throws Exception 
+{	
+	ModelAndView mv= new ModelAndView("add");
 	return mv;
 }
 }

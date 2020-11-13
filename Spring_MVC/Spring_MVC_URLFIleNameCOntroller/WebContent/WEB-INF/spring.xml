@@ -7,6 +7,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
  
 <bean name="/hello.ds" class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
 <bean name="/hai.ds" class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
+<bean name="/welcome.ds" class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
 
  <bean name="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
 	<property name="prefix">
