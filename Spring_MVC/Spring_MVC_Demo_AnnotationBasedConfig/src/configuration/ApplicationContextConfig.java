@@ -4,6 +4,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 /**
@@ -14,7 +16,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 @ComponentScan(basePackages = "controller")
 //The Component scan is necessary to initialize the controller annotation classes to handle the upcoming request
-public class ApplicationContextConfig 
+public class ApplicationContextConfig implements WebMvcConfigurer
 {
 	 @Bean(name = "viewResolver")
 	    public InternalResourceViewResolver getViewResolver() {
@@ -22,5 +24,5 @@ public class ApplicationContextConfig
 	        viewResolver.setPrefix("/");
 	        viewResolver.setSuffix(".jsp");
 	        return viewResolver;
-	    }	    
+	    }	     
 }
